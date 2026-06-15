@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-yellow: #f4c550;
+  --color-yellow-soft: #fbe9ba;
+
+  --color-sage: #9fbaae;
+  --color-sage-soft: #cbded3;
+
+  --color-sky: #9fb7ce;
+  --color-sky-soft: #bfd6ea;
+
+  --color-rose: #e0a39a;
+  --color-rose-soft: #f2c0bd;
+
+  --color-peach: #f0aa8d;
+  --color-peach-soft: #f4c8ba;
+
+  --font-sans: "Roboto", sans-serif;
+  --color-primary: #121417;
+  --color-secondary: #8a8a89;
+}

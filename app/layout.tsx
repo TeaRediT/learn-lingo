@@ -15,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${roboto.variable} scroll-smooth`}>
-      <body>{children}</body>
+      <body className="font-sans text-primary font-medium leading-normal">
+        {children}
+      </body>
     </html>
   );
 }

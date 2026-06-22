@@ -4,7 +4,7 @@ import Button from "../button/Button";
 const Header = () => {
   return (
     <header>
-      <div className="flex justify-between items-center px-32 my-5">
+      <div className="flex justify-between items-center max-w-360 px-32 my-5 mx-auto">
         <Link className="flex items-center gap-2" href={"/"}>
           <svg width={28} height={28}>
             <use href="/sprite.svg#icon-logo"></use>

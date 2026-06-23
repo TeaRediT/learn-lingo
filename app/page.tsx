@@ -1,11 +1,19 @@
 import Container from "@/components/common/container/Container";
+import DashedBorder from "@/components/common/dashedBorder/DashedBorder";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  const stats = [
+    { value: "32,000 +", label: "Experienced tutors" },
+    { value: "300,000 +", label: "5-star tutor reviews" },
+    { value: "120 +", label: "Subjects taught" },
+    { value: "200 +", label: "Tutor nationalities" },
+  ];
+
   return (
     <main>
-      <section>
+      <section className="hero mb-6">
         <Container>
           <div className="flex justify-between">
             <div className="w-180 rounded-[30px] bg-[#f8f8f8] py-24.5 px-16">
@@ -39,6 +47,31 @@ export default function Home() {
                 alt="Language tutor illustration"
               />
             </div>
+          </div>
+        </Container>
+      </section>
+      <section className="stats">
+        <Container>
+          <h2 className="sr-only">Platform statistics</h2>
+          <div className="relative h-29 px-30.5">
+            <ul className="flex justify-between items-center gap-25 h-full">
+              {stats.map((stat, id) => {
+                return (
+                  <li
+                    className="flex justify-center items-center gap-4"
+                    key={id}
+                  >
+                    <p className="text-[28px] leading-[1.14] tracking-[-0.02em]">
+                      {stat.value}
+                    </p>
+                    <p className="max-w-18 font-normal text-[14px] leading-[1.29] tracking-[-0.02em] text-[rgba(18,20,23,0.7)]">
+                      {stat.label}
+                    </p>
+                  </li>
+                );
+              })}
+            </ul>
+            <DashedBorder />
           </div>
         </Container>
       </section>

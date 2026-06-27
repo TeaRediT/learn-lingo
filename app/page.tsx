@@ -1,5 +1,5 @@
-import Container from "@/components/common/container/Container";
-import DashedBorder from "@/components/common/dashedBorder/DashedBorder";
+import Container from "@/components/common/Container/Container";
+import DashedBorder from "@/components/common/DashedBorder/DashedBorder";
 import Image from "next/image";
 import Link from "next/link";
 

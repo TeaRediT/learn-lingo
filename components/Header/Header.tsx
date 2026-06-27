@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Button from "../button/Button";
+import Button from "../Button/Button";
 
 const Header = () => {
   const interactiveStyles =

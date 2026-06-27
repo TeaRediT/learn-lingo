@@ -1,6 +1,7 @@
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
+import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
 
 const roboto = Roboto({
   variable: "--font-family",
@@ -16,10 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${roboto.variable} scroll-smooth`}>
-      <body className="font-sans text-primary font-medium leading-normal">
-        <Header />
-        {children}
-      </body>
+      <TanStackProvider>
+        <body className="font-sans text-primary font-medium leading-normal">
+          <Header />
+          {children}
+        </body>
+      </TanStackProvider>
     </html>
   );
 }

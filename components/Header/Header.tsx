@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <header>
-      <div className="flex justify-between items-center max-w-360 px-32 my-5 mx-auto">
+      <div className="flex justify-between items-center max-w-360 px-32 mt-5 mx-auto">
         <Link className="flex items-center gap-2" href={"/"}>
           <svg width={28} height={28}>
             <use href="/sprite.svg#icon-logo"></use>

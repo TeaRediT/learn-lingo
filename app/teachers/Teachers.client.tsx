@@ -44,7 +44,7 @@ const TeachersClient = () => {
   return (
     <main className="bg-[#f8f8f8]">
       <h1 className="sr-only">Teachers Catalog</h1>
-      <section className="search-section mt-7 mb-8">
+      <section className="search-section pt-2 pb-8">
         <Container size="md">
           <h2 className="sr-only">Teachers Search</h2>
           <form className="flex justify-center border">

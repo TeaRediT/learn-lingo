@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <main>
-      <section className="hero mb-6 mt-5">
+      <section className="hero mb-6">
         <Container size="sm">
           <div className="flex justify-between">
             <div className="w-180 rounded-[30px] bg-[#f8f8f8] py-24.5 px-16">

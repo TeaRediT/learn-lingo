@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Button from "../Button/Button";
 
-const Header = () => {
-  const interactiveStyles =
-    "[:hover,:focus]:text-yellow transition-colors ease-in-out duration-250";
+const interactiveStyles =
+  "[:hover,:focus]:text-yellow transition-colors ease-in-out duration-250";
 
+const Header = () => {
   return (
     <header>
-      <div className="flex justify-between items-center max-w-360 px-32 mt-5 mx-auto">
+      <div className="flex justify-between items-center max-w-360 px-32 py-5 mx-auto">
         <Link className="flex items-center gap-2" href={"/"}>
           <svg width={28} height={28}>
             <use href="/sprite.svg#icon-logo"></use>

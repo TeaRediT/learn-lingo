@@ -13,6 +13,8 @@ type LvlLang =
   | "A2 Elementary"
   | "B1 Intermediate"
   | "B2 Upper-Intermediate"
+  | "C1 Advanced"
+  | "C2 Proficient"
   | null;
 type Price = "10" | "20" | "30" | "40" | null;
 
@@ -40,7 +42,7 @@ const TeachersClient = () => {
   }
 
   return (
-    <main>
+    <main className="bg-[#f8f8f8]">
       <h1 className="sr-only">Teachers Catalog</h1>
       <section className="search-section mt-7 mb-8">
         <Container size="md">

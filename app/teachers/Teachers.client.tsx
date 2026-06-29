@@ -1,5 +1,7 @@
 "use client";
 
+import Container from "@/components/common/Container/Container";
+import TeachersList from "@/components/TeachersList/TeachersList";
 import { fetchTeachers } from "@/lib/api";
 import { Teacher } from "@/types/teachers";
 import { useQuery } from "@tanstack/react-query";
@@ -25,10 +27,10 @@ const TeachersClient = () => {
     refetchOnMount: false,
   });
 
-  let teachers = data ? Object.values(data).filter(Boolean) : [];
+  let teachers: Teacher[] = data ? Object.values(data).filter(Boolean) : [];
 
   if (language || lvlLang || price) {
-    teachers = teachers.filter((el: Teacher) => {
+    teachers = teachers.filter((el) => {
       const matchLang = language ? el.languages.includes(language) : true;
       const matchLvlLang = lvlLang ? el.levels.includes(lvlLang) : true;
       const matchPrice = price ? el.price_per_hour.toString() === price : true;
@@ -37,9 +39,30 @@ const TeachersClient = () => {
     });
   }
 
-  console.log(teachers);
-
-  return <></>;
+  return (
+    <main>
+      <h1 className="sr-only">Teachers Catalog</h1>
+      <section className="search-section mt-7 mb-8">
+        <Container size="md">
+          <h2 className="sr-only">Teachers Search</h2>
+          <form className="flex justify-center border">
+            <label htmlFor="1">1</label>
+            <input name="1" type="text" />
+            <label htmlFor="1">2</label>
+            <input name="2" type="text" />
+            <label htmlFor="1">3</label>
+            <input name="3" type="text" />
+          </form>
+        </Container>
+      </section>
+      <section className="catalog-section">
+        <Container size="md">
+          <h2 className="sr-only">Teachers List</h2>
+          {teachers.length > 0 && <TeachersList teachers={teachers} />}
+        </Container>
+      </section>
+    </main>
+  );
 };
 
 export default TeachersClient;

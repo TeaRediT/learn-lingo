@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main>
       <section className="hero mb-6 mt-5">
-        <Container>
+        <Container size="sm">
           <div className="flex justify-between">
             <div className="w-180 rounded-[30px] bg-[#f8f8f8] py-24.5 px-16">
               <h1 className="text-[48px] leading-[1.17] tracking-[-0.02em] mb-8">
@@ -51,7 +51,7 @@ export default function Home() {
         </Container>
       </section>
       <section className="stats">
-        <Container>
+        <Container size="sm">
           <h2 className="sr-only">Platform statistics</h2>
           <div className="relative h-29 px-30.5">
             <ul className="flex justify-between items-center gap-25 h-full">
